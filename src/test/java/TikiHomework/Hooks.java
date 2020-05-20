@@ -1,4 +1,4 @@
-package firstcucumber;
+package TikiHomework;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -24,11 +24,6 @@ public class Hooks {
     //mvn test -Dbrowser=chrome
     @After
     public void Aftertest(Scenario scenario) {
-        if (scenario.isFailed()) {
-            final byte[] screenshot = ((TakesScreenshot) this.driver).getScreenshotAs(OutputType.BYTES);
-//        scenario.em(screenshot,"image/png)");
-
-        }
         this.driver.quit();
     }
 }
